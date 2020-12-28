@@ -1,7 +1,8 @@
-app work
 
+<p>Barkod Okutulmuş v1</p>
 
-<p>Barkod Okutulmuş Onaylı Stoklar</p>
-
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
-
+<zxing-scanner
+  (scanSuccess)="onCodeResult($event)"
+  [formats]="formatsEnabled"
+ 
+></zxing-scanner>
