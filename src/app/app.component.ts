@@ -17,11 +17,16 @@ export class AppComponent implements AfterViewInit {
   barkodDeger="";
 
   ngAfterViewInit() {
-    this.barcodeScanner.start();
+    
   }
  
+  BarkodOkut()
+  {
+    this.barcodeScanner.start();
+  }
   onValueChanges(result) {
     this.barkodDeger=result.codeResult.code;
+    this.barcodeScanner.stop();
    
   }
  

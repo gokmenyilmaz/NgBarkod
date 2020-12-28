@@ -1,10 +1,13 @@
-<p>Angular Barkod Okutma v1</p>
-<p>SSL olmadan çalışmaz</p>
+<p>Angular Barkod Okutma v1 SSL olmadan çalışmaz x</p>
+
+<div style="display:flex">
+  <input class="form-control" style="margin: 5px;" type="text" value="{{barkodDeger}}">
+  <button type="button" class="btn btn-primary" (click)="BarkodOkut()">Okut</button>
+</div>
 
 
-<input type="text" value="{{barkodDeger}}">
-
-<barcode-scanner-livestream
+<barcode-scanner-livestream 
+  style="width:100px;height:100px;"
   type="code_128"
   (valueChanges)="onValueChanges($event)"
 >
