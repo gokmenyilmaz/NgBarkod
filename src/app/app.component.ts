@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+
 import { BarcodeFormat } from '@zxing/library';
+
+
+import { Component, ViewChild, AfterViewInit } from "@angular/core";
+import { BarcodeScannerLivestreamComponent } from "ngx-barcode-scanner";
 
 @Component({
   selector: 'app-root',
@@ -7,22 +11,19 @@ import { BarcodeFormat } from '@zxing/library';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent{
-  errorMessage = '';
+export class AppComponent implements AfterViewInit {
+  @ViewChild(BarcodeScannerLivestreamComponent)
+  barcodeScanner: BarcodeScannerLivestreamComponent;
+  barkodDeger="";
 
-  formatsEnabled: BarcodeFormat[] = [
-    BarcodeFormat.CODE_128,
-    BarcodeFormat.DATA_MATRIX,
-    BarcodeFormat.EAN_13,
-    BarcodeFormat.QR_CODE,
-  ];
-
-  constructor() {}
-
- 
-  onCodeResult(resultString: string) {
-    alert(resultString);
+  ngAfterViewInit() {
+    this.barcodeScanner.start();
   }
-
+ 
+  onValueChanges(result) {
+    this.barkodDeger=result.codeResult.code;
+   
+  }
+ 
 
 }

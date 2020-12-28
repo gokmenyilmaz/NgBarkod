@@ -19,9 +19,11 @@
     "@angular/platform-browser": "~10.1.4",
     "@angular/platform-browser-dynamic": "~10.1.4",
     "@angular/router": "~10.1.4",
+    "@ericblade/quagga2": "^1.2.6",
     "@zxing/browser": "0.0.5",
     "@zxing/library": "^0.18.3",
     "@zxing/ngx-scanner": "^3.1.2",
+    "ngx-barcode-scanner": "^0.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

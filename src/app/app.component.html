@@ -1,8 +1,11 @@
+<p>Angular Barkod Okutma v1</p>
+<p>SSL olmadan çalışmaz</p>
 
-<p>Barkod Okutulmuş v1</p>
 
-<zxing-scanner
-  (scanSuccess)="onCodeResult($event)"
-  [formats]="formatsEnabled"
- 
-></zxing-scanner>
+<input type="text" value="{{barkodDeger}}">
+
+<barcode-scanner-livestream
+  type="code_128"
+  (valueChanges)="onValueChanges($event)"
+>
+</barcode-scanner-livestream>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { BarcodeScannerLivestreamModule } from "ngx-barcode-scanner";
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
   ],
   imports: [
     BrowserModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    BarcodeScannerLivestreamModule
   ],
   providers: [],
   bootstrap: [AppComponent]
